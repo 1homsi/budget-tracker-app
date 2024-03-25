@@ -69,7 +69,7 @@ function TabBar({ state, descriptors, navigation }) {
             style={styles.tabBarItem}
             key={index}
           >
-            {label.toLowerCase() === "stats" && (
+            {label.toLowerCase() === "statistics" && (
               <>
                 {isFocused ? (
                   <Foundation

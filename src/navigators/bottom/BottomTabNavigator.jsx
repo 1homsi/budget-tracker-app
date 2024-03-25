@@ -24,7 +24,7 @@ const BottomTabNavigator = () => {
           tabBarHideOnKeyboard: true,
         }}
       >
-        <Tab.Screen name="stats" component={Stats} />
+        <Tab.Screen name="statistics" component={Stats} />
         <Tab.Screen name="home" component={Home} />
         <Tab.Screen name="more" component={More} />
       </Tab.Navigator>
