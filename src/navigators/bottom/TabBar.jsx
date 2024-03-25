@@ -89,13 +89,13 @@ function TabBar({ state, descriptors, navigation }) {
             {label.toLowerCase() === "home" && (
               <View
                 style={{
-                  width: 55,
-                  height: 55,
+                  width: 60,
+                  height: 60,
                   borderRadius: 300,
                   backgroundColor: primary,
                   justifyContent: "center",
                   alignItems: "center",
-                  marginBottom: 25,
+                  marginBottom: 40,
                 }}
               >
                 <Feather name="plus" size={scaleFont(23)} color={light} />
@@ -120,16 +120,18 @@ function TabBar({ state, descriptors, navigation }) {
               </>
             )}
 
-            <Text
-              style={{
-                color: isFocused ? primary : isDarkMode ? "#fff" : "#222",
-                fontSize: scaleFont(11),
-                marginTop: 3,
-                fontFamily: "Popins-Medium",
-              }}
-            >
-              {label.charAt(0).toUpperCase() + label.slice(1)}
-            </Text>
+            {label.toLowerCase() !== "home" && (
+              <Text
+                style={{
+                  color: isFocused ? primary : isDarkMode ? "#fff" : "#222",
+                  fontSize: scaleFont(11),
+                  marginTop: 3,
+                  fontFamily: "Popins-Medium",
+                }}
+              >
+                {label.charAt(0).toUpperCase() + label.slice(1)}
+              </Text>
+            )}
           </TouchableOpacity>
         );
       })}
