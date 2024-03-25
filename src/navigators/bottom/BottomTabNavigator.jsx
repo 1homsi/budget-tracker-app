@@ -3,6 +3,7 @@ import React from "react";
 import TabBar from "./TabBar";
 import Home from "../../Screens/Home";
 import More from "../../Screens/More";
+import Stats from "../../Screens/Stats";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,12 +17,14 @@ const BottomTabNavigator = () => {
             state={{ ...props.state, routes: props.state.routes.slice(0, 5) }}
           />
         )}
+        initialRouteName="home"
         detachInactiveScreens={true}
         screenOptions={{
           headerShown: false,
           tabBarHideOnKeyboard: true,
         }}
       >
+        <Tab.Screen name="stats" component={Stats} />
         <Tab.Screen name="home" component={Home} />
         <Tab.Screen name="more" component={More} />
       </Tab.Navigator>

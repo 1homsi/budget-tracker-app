@@ -5,17 +5,19 @@ export default function useColors() {
   const { isDarkMode } = useTheme();
 
   const darkThemeColors = {
-    primary: "#005F7F",
+    primary: "#008DDA",
     secondary: "#13CDBE",
     darkColor: "#016B63",
     background: "#0F0F0F",
+    light: "#1A1A1A",
   };
 
   const lightThemeColors = {
-    primary: "#005F7F",
+    primary: "#008DDA",
     secondary: "#13CDBE",
     darkColor: "#016B63",
     background: "#fff",
+    light: "#F0F0F0",
   };
 
 

@@ -1,13 +1,13 @@
 import {
   View,
-  Image,
   TouchableOpacity,
   StyleSheet,
   Vibration,
   Text,
 } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
+import Foundation from "react-native-vector-icons/Foundation";
 
 import { useTheme } from "../../../HOCs/ThemeContext";
 import useColors from "../../../hooks/useColors";
@@ -69,18 +69,37 @@ function TabBar({ state, descriptors, navigation }) {
             style={styles.tabBarItem}
             key={index}
           >
-            {label.toLowerCase() === "home" && (
+            {label.toLowerCase() === "stats" && (
               <>
                 {isFocused ? (
-                  <Ionicons name="home" size={scaleFont(23)} color={primary} />
+                  <Foundation
+                    name="graph-trend"
+                    size={scaleFont(23)}
+                    color={primary}
+                  />
                 ) : (
-                  <Ionicons
-                    name="home"
+                  <Foundation
+                    name="graph-trend"
                     size={scaleFont(23)}
                     color={isDarkMode ? "#fff" : "#222"}
                   />
                 )}
               </>
+            )}
+            {label.toLowerCase() === "home" && (
+              <View
+                style={{
+                  width: 55,
+                  height: 55,
+                  borderRadius: 300,
+                  backgroundColor: primary,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: 25,
+                }}
+              >
+                <Feather name="plus" size={scaleFont(23)} color={light} />
+              </View>
             )}
 
             {label.toLowerCase() === "more" && (
@@ -89,7 +108,7 @@ function TabBar({ state, descriptors, navigation }) {
                   <Entypo
                     name="dots-three-horizontal"
                     size={scaleFont(23)}
-                    color="#05a79a"
+                    color={primary}
                   />
                 ) : (
                   <Entypo
