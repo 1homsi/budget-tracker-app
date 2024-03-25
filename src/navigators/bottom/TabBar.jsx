@@ -71,14 +71,10 @@ function TabBar({ state, descriptors, navigation }) {
             {label.toLowerCase() === "home" && (
               <>
                 {isFocused ? (
-                  <Ionicons
-                    name="home-sharp"
-                    size={scaleFont(23)}
-                    color={primary}
-                  />
+                  <Ionicons name="home" size={scaleFont(23)} color={primary} />
                 ) : (
                   <Ionicons
-                    name="home-sharp"
+                    name="home"
                     size={scaleFont(23)}
                     color={isDarkMode ? "#fff" : "#222"}
                   />
