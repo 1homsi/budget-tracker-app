@@ -10,6 +10,8 @@ export default function useColors() {
     darkColor: "#016B63",
     background: "#0F0F0F",
     light: "#1A1A1A",
+    bgColor: "#0F0F0F",
+    textColor: "#fff",
   };
 
   const lightThemeColors = {
@@ -18,6 +20,8 @@ export default function useColors() {
     darkColor: "#016B63",
     background: "#fff",
     light: "#F0F0F0",
+    bgColor: "#EEEEEE",
+    textColor: "#000",
   };
 
 

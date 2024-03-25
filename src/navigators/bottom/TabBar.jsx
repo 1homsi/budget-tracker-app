@@ -98,7 +98,7 @@ function TabBar({ state, descriptors, navigation }) {
                   marginBottom: 40,
                 }}
               >
-                <Feather name="plus" size={scaleFont(23)} color={light} />
+                <Feather name="plus" size={scaleFont(24)} color={"#fff"} />
               </View>
             )}
 
