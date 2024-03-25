@@ -7,6 +7,7 @@ import {
   Text,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Entypo from "react-native-vector-icons/Entypo";
 
 import { useTheme } from "../../../HOCs/ThemeContext";
 import useColors from "../../../hooks/useColors";
@@ -75,6 +76,24 @@ function TabBar({ state, descriptors, navigation }) {
                 ) : (
                   <Ionicons
                     name="home"
+                    size={scaleFont(23)}
+                    color={isDarkMode ? "#fff" : "#222"}
+                  />
+                )}
+              </>
+            )}
+
+            {label.toLowerCase() === "more" && (
+              <>
+                {isFocused ? (
+                  <Entypo
+                    name="dots-three-horizontal"
+                    size={scaleFont(23)}
+                    color="#05a79a"
+                  />
+                ) : (
+                  <Entypo
+                    name="dots-three-horizontal"
                     size={scaleFont(23)}
                     color={isDarkMode ? "#fff" : "#222"}
                   />

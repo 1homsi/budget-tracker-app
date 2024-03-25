@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import TabBar from "./TabBar";
 import Home from "../../Screens/Home";
+import More from "../../Screens/More";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,6 +23,7 @@ const BottomTabNavigator = () => {
         }}
       >
         <Tab.Screen name="home" component={Home} />
+        <Tab.Screen name="more" component={More} />
       </Tab.Navigator>
     </React.Fragment>
   );
